@@ -1,5 +1,10 @@
 const colors = {
-  background: '#1F0808',
+  background: '#261136',
+  headerBackground: '#421C60',
+  headerTint: 'white',
+  bottomTabBackground: '#421C60',
+  bottomTabActiveTint: 'white',
+  bottomTabInActiveTint: '#7C6190',
   clear: 'rgba(0,0,0,0)',
   facebook: '#3b5998',
   transparent: 'rgba(0,0,0,0)',

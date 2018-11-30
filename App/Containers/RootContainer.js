@@ -6,7 +6,7 @@ class RootContainer extends React.Component {
   render() {
     return (
       <View style={styles.applicationView}>
-        <StatusBar barStyle='default' />
+        <StatusBar barStyle='light-content' />
         <AppNavigation />
       </View>
     )

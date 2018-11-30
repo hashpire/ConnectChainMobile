@@ -1,30 +1,38 @@
-import React from 'react';
-import { Text, View } from 'react-native';
-import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
+import { createSwitchNavigator, createBottomTabNavigator, createStackNavigator, createAppContainer } from 'react-navigation';
+// Screens for AuthLoading
+import AuthLoadingScreen from '../Containers/AuthLoadingScreen';
+// Screens for AuthStack
+import SignInScreen from '../Containers/SignInScreen';
+// Screens for AppNavigator
+import HomeScreen from '../Containers/HomeScreen';
+import MeScreen from '../Containers/MeScreen';
+import SettingsScreen from '../Containers/SettingsScreen';
+import FollowScreen from '../Containers/FollowScreen';
 
-class HomeScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Home!</Text>
-      </View>
-    );
-  }
-}
-
-class SettingsScreen extends React.Component {
-  render() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Settings!</Text>
-      </View>
-    );
-  }
-}
-
-const TabNavigator = createBottomTabNavigator({
-  Home: HomeScreen,
+const HomeStack = createStackNavigator({ Home: HomeScreen });
+const FollowStack = createStackNavigator({ Follow: FollowScreen });
+const MeStack = createStackNavigator(
+  {
+  Me: MeScreen,
   Settings: SettingsScreen,
+  }
+);
+
+const AppNavigator = createBottomTabNavigator({ 
+  Home: HomeStack, 
+  Follow: FollowStack,
+  Me: MeStack 
 });
 
-export default createAppContainer(TabNavigator);
+const AuthStack = createStackNavigator({ SignIn: SignInScreen });
+
+export default createAppContainer(createSwitchNavigator(
+  {
+    AuthLoading: AuthLoadingScreen,
+    Auth: AuthStack,
+    App: AppNavigator,
+  },
+  {
+    initialRouteName: 'AuthLoading',
+  }
+));

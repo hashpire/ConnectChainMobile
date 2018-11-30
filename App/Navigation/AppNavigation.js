@@ -1,3 +1,4 @@
+import React from 'react';
 import { createSwitchNavigator, createBottomTabNavigator, createStackNavigator, createAppContainer } from 'react-navigation';
 // Screens for AuthLoading
 import AuthLoadingScreen from '../Containers/AuthLoadingScreen';
@@ -10,6 +11,10 @@ import SettingsScreen from '../Containers/SettingsScreen';
 import FollowScreen from '../Containers/FollowScreen';
 // Background Color
 import { Colors } from '../Themes';
+// Tab Icons
+import Icon from 'react-native-vector-icons/Ionicons';
+
+
 // Stack Header settings
 const defaultNavigationOptions = {
   headerStyle: {
@@ -46,6 +51,23 @@ const AppNavigator = createBottomTabNavigator(
     Me: MeStack 
   },
   {
+    defaultNavigationOptions: ({ navigation }) => ({
+      tabBarIcon: ({ focused, horizontal, tintColor }) => {
+        const { routeName } = navigation.state;
+        let iconName;
+        if (routeName === 'Home') {
+          iconName = 'ios-home';
+        } else if (routeName === 'Follow') {
+          iconName = 'ios-list';
+        } else if (routeName === 'Me') {
+          iconName = 'ios-person';
+        }
+      
+        // You can return any component that you like here! We usually use an
+        // icon component from react-native-vector-icons
+        return <Icon name={iconName} size={horizontal ? 20 : 25} color={tintColor} />;
+      },
+    }),
     tabBarOptions: {
       activeTintColor: Colors.bottomTabActiveTint,
       inactiveTintColor: Colors.bottomTabInActiveTint,

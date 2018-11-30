@@ -17,10 +17,10 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 // Stack Header settings
 const defaultNavigationOptions = {
-  headerStyle: {
-    backgroundColor: Colors.headerBackground,
-    borderBottomWidth: 0,
-  },
+  headerTransparent: true,
+  // headerStyle: {
+  //   borderBottomWidth: 0,
+  // },
   headerTintColor: Colors.headerTint,
 };
 

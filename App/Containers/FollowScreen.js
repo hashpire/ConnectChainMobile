@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 import styles from './Styles/FollowScreenStyles';
+import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text } from 'native-base';
 
 class FollowScreen extends React.Component {
   static navigationOptions = {
@@ -9,9 +9,13 @@ class FollowScreen extends React.Component {
   
   render() {
     return (
-      <View style={styles.mainContainer}>
-        <Text style={styles.sectionText}>Follow Screen</Text>
-      </View>    
+      <Container>
+        <Content>
+          <Text>
+            This is Content Section
+          </Text>
+        </Content>
+      </Container>  
     )
   }
 }

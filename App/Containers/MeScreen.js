@@ -10,11 +10,13 @@ class MeScreen extends React.Component {
   render() {
     return (
       <View style={styles.mainContainer}>
-        <Text style={styles.sectionText}>Me Screen</Text>
-        <Button
-          title="Go to Settings"
-          onPress={() => this.props.navigation.navigate('Settings')}
-        />
+          <View style={styles.section} >
+            <Text style={styles.sectionText}>Me Screen</Text>
+            <Button
+              title="Go to Settings"
+              onPress={() => this.props.navigation.navigate('Settings')}
+            />
+          </View>
       </View>    
     )
   }

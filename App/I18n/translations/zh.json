@@ -1,0 +1,4 @@
+{
+  "title": "测试 react-native-languages demo",
+  "current": "现在系统语言 \"{{language}}\""
+}

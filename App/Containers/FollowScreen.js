@@ -10,7 +10,7 @@ class FollowScreen extends React.Component {
   render() {
     return (
       <View style={styles.mainContainer}>
-        <Text>Follow Screen</Text>
+        <Text style={styles.sectionText}>Follow Screen</Text>
       </View>    
     )
   }

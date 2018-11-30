@@ -10,11 +10,16 @@ class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.mainContainer}>
-        <Text>Home Screen</Text>
-        <Text>{I18n.t('title')}</Text>
-        <Text>
+        <Text style={styles.titleText}>Home Screen</Text>
+        <View style={styles.section} >
+          <Text style={styles.sectionText}>{I18n.t('title')}</Text>
+          <Text style={styles.sectionText}>
           {I18n.t('current', { language: I18n.currentLocale() })}
-        </Text>
+          </Text>
+          <Text style={styles.sectionText}>
+            This probably isn't what your app is going to look like. Unless your designer handed you this screen and, in that case, congrats! You're ready to ship. For everyone else, this is where you'll see a live preview of your fully functioning app using Ignite.
+          </Text>
+          </View>
       </View>    
     )
   }

@@ -1,23 +1,25 @@
 import React from 'react';
-import { View, Text , Button } from 'react-native';
+import { View } from 'react-native';
 import styles from './Styles/MeScreenStyles';
-
+import { Container, Header, Right, Button, Content , Text , Icon } from 'native-base';
 class MeScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Me',
-  };
   
   render() {
     return (
-      <View style={styles.mainContainer}>
-          <View style={styles.section} >
-            <Text style={styles.sectionText}>Me Screen</Text>
+      <Container>
+        <Header>
+          <Right>
             <Button
-              title="Go to Settings"
-              onPress={() => this.props.navigation.navigate('Settings')}
-            />
-          </View>
-      </View>    
+              transparent
+              onPress={() => this.props.navigation.navigate('Settings')}>
+              <Icon name="ios-settings" />
+            </Button>
+          </Right>
+        </Header>
+        <Content>
+          <Text>Me Screen</Text>
+        </Content>
+      </Container>  
     )
   }
 }

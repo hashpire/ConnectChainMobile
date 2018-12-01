@@ -14,24 +14,6 @@ import { Colors } from '../Themes';
 // Tab Icons
 import Icon from 'react-native-vector-icons/Ionicons';
 
-
-// Stack Header settings
-const defaultNavigationOptions = {
-  headerTransparent: true,
-  // headerStyle: {
-  //   borderBottomWidth: 0,
-  // },
-  headerTintColor: Colors.headerTint,
-};
-
-const HomeStack = createStackNavigator({ Home: HomeScreen }, {
-  defaultNavigationOptions,
-  cardStyle: { backgroundColor: Colors.background }
-});
-const FollowStack = createStackNavigator({ Follow: FollowScreen },{
-  defaultNavigationOptions,
-  cardStyle: { backgroundColor: Colors.background }
-});
 const MeStack = createStackNavigator(
   {
     Me: MeScreen,
@@ -39,15 +21,14 @@ const MeStack = createStackNavigator(
   },
   { 
     initialRouteName: 'Me',
-    defaultNavigationOptions,
-    cardStyle: { backgroundColor: Colors.background }
+    headerMode: 'none'
   }
 );
 
 const AppNavigator = createBottomTabNavigator(
   { 
-    Home: HomeStack, 
-    Follow: FollowStack,
+    Home: HomeScreen, 
+    Follow: FollowScreen,
     Me: MeStack 
   },
   {
@@ -63,8 +44,7 @@ const AppNavigator = createBottomTabNavigator(
           iconName = 'ios-person';
         }
       
-        // You can return any component that you like here! We usually use an
-        // icon component from react-native-vector-icons
+        // return icon component from react-native-vector-icons
         return <Icon name={iconName} size={horizontal ? 20 : 25} color={tintColor} />;
       },
     }),

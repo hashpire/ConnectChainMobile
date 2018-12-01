@@ -10,7 +10,14 @@ class FollowScreen extends React.Component {
   render() {
     return (
       <Container>
-        <Content>
+        <Header transparent>
+          <Left />
+          <Body>
+            <Title>Follow</Title>
+          </Body>
+          <Right />
+        </Header>
+        <Content padder style={styles.content}>
           <Text>
             This is Content Section
           </Text>

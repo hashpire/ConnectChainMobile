@@ -1,25 +1,36 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Alert } from 'react-native';
 import styles from './Styles/HomeScreenStyles';
 import I18n from '../I18n';
-class HomeScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Home',
-  };
-  
+import { Container, Body, Content, Header, Left, Right, Icon, Title, Input, Item, Label, Button, Text } from "native-base";
+
+class HomeScreen extends React.Component {  
   render() {
     return (
-      <View style={styles.mainContainer}>
-        <View style={styles.section} >
-          <Text style={styles.sectionText}>{I18n.t('title')}</Text>
-          <Text style={styles.sectionText}>
-          {I18n.t('current', { language: I18n.currentLocale() })}
+      <Container>
+        <Header>
+          <Left />
+          <Body>
+            <Title>Home</Title>
+          </Body>
+          <Right />
+        </Header>
+        <Content padder>
+          <Item floatingLabel style={{ marginTop: 20 }}>
+            <Label>float Test</Label>
+            <Input />
+          </Item>
+          <Button rounded danger
+            style={{ marginTop: 20, alignSelf: "center" }}
+            onPress={() => Alert.alert("Button Clicked", "Button Clicked")}>
+            <Text>HAHA</Text>
+          </Button>
+          <Text>{I18n.t('title')}</Text>
+          <Text>
+            {I18n.t('current', { language: I18n.currentLocale() })}
           </Text>
-          <Text style={styles.sectionText}>
-            This probably isn't what your app is going to look like. Unless your designer handed you this screen and, in that case, congrats! You're ready to ship. For everyone else, this is where you'll see a live preview of your fully functioning app using Ignite.
-          </Text>
-        </View>
-      </View>    
+        </Content>
+      </Container>
     )
   }
 }

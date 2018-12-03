@@ -5,6 +5,7 @@ import I18n from '../I18n';
 import { Container, Body, Content, Header, Left, Right, Icon, Title, Input, Item, Label, Button, Text , StyleProvider } from "native-base";
 import getTheme from '../../native-base-theme/components';
 import platform from '../../native-base-theme/variables/platform';
+import HelloContainer from './HelloContainer';
 class HomeScreen extends React.Component {  
   render() {
     return (
@@ -31,6 +32,7 @@ class HomeScreen extends React.Component {
             <Text>
               {I18n.t('current', { language: I18n.currentLocale() })}
             </Text>
+            <HelloContainer/>
           </Content>
         </Container>
       </StyleProvider>

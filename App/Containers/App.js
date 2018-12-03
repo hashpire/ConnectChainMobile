@@ -10,7 +10,8 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 import RootContainer from './RootContainer';
 import RNLanguages from 'react-native-languages';
 import I18n from '../I18n';
-
+import { Provider } from 'react-redux'
+import store from '../Redux/index.js';
 // const instructions = Platform.select({
 //   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
 //   android:
@@ -33,8 +34,11 @@ export default class App extends Component<Props> {
   };
 
   render() {
+
     return (
-      <RootContainer/>
+      <Provider store={store}>
+        <RootContainer/>
+      </Provider>
     );
   }
 }

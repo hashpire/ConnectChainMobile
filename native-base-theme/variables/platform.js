@@ -1,4 +1,5 @@
 // @flow
+import Colors from '../../App/Themes/Colors';
 
 import color from "color";
 
@@ -114,7 +115,7 @@ export default {
   brandLight: "#f4f4f4",
 
   //Container
-  containerBgColor: "#fff",
+  containerBgColor: Colors.background,
 
   //Date Picker
   datePickerTextColor: "#000",

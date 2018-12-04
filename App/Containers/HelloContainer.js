@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { addText } from '../Redux/HelloRedux'
+import { addText, addTextAsync } from '../Redux/HelloRedux'
 import HelloComponent from '../Components/HelloComponent';
 
 const mapStateToProps = (state, ownProps) => {
@@ -10,7 +10,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onClick: (text) => dispatch(addText(text))
+    add: (text) => dispatch(addText(text)),
+    addAsync: (text) => dispatch(addTextAsync(text))
   }
 };
 

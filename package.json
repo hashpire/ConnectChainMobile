@@ -19,7 +19,8 @@
     "react-native-vector-icons": "^6.1.0",
     "react-navigation": "^3.0.2",
     "react-redux": "^5.1.1",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "redux-saga": "^0.16.2"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^4.0.9",

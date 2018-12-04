@@ -6,8 +6,11 @@ class HelloComponent extends React.Component {
     return (
       <View>
         <Text>{"Array:" + this.props.textArray}</Text>
-        <Button onPress={()=>this.props.onClick("Random Message Here")}>
-          <Text>Add</Text>
+        <Button onPress={()=>this.props.add("Random Message Here")}>
+          <Text>Add33</Text>
+        </Button>
+        <Button onPress={()=>this.props.addAsync("Async")}>
+          <Text>Add2</Text>
         </Button>
       </View>
     )

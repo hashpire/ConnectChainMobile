@@ -1,11 +1,19 @@
 /* ------------- Action Types ------------- */
 export const ADD_TEXT = 'ADD_TEXT';
+export const ADD_TEXT_ASYNC = 'ADD_TEXT_ASYNC';
 
 /* ------------- Action Creators ------------- */
 
 export function addText(text) {
   return {
     type: ADD_TEXT,
+    text
+  }
+}
+
+export function addTextAsync(text) {
+  return {
+    type: ADD_TEXT_ASYNC,
     text
   }
 }

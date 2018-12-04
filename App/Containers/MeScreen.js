@@ -1,13 +1,15 @@
 import React from 'react';
 import { View } from 'react-native';
 import styles from './Styles/MeScreenStyles';
-import { Container, Header, Right, Button, Content , Text , Icon } from 'native-base';
+import { Container, Header, Right, Button, Content , Text , Icon, StyleProvider } from 'native-base';
+// import getTheme from '../../native-base-theme/components';
+// import platform from '../../native-base-theme/variables/platform';
 class MeScreen extends React.Component {
   
   render() {
     return (
       <Container>
-        <Header>
+        <Header transparent>
           <Right>
             <Button
               transparent

@@ -20,3 +20,15 @@ https://github.com/storybooks/storybook
 https://storybook.js.org/
 - nativebase  
 https://docs.nativebase.io/
+- redux & react redux
+https://redux.js.org/basics/usagewithreact  
+- redux saga
+https://redux-saga.js.org
+
+
+## TOOLS
+https://github.com/jhen0409/react-native-debugger/
+
+## .ENV
+ENABLE_STORYBOOK=0
+ENABLE_REDUX_DEVTOOLS=1

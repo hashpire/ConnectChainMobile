@@ -150,7 +150,7 @@ export default {
 
   // Header
   toolbarBtnColor: platform === "ios" ? "#007aff" : "#fff",
-  toolbarDefaultBg: platform === "ios" ? "#F8F8F8" : "#3F51B5",
+  toolbarDefaultBg: Colors.headerBackground,
   toolbarHeight: platform === "ios" ? 64 : 56,
   toolbarSearchIconSize: platform === "ios" ? 20 : 23,
   toolbarInputColor: platform === "ios" ? "#CECDD2" : "#fff",
@@ -253,7 +253,7 @@ export default {
   titleFontSize: platform === "ios" ? 17 : 19,
   subTitleFontSize: platform === "ios" ? 11 : 14,
   subtitleColor: platform === "ios" ? "#8e8e93" : "#FFF",
-  titleFontColor: platform === "ios" ? "#000" : "#FFF",
+  titleFontColor: Colors.snow,
 
   // Other
   borderRadiusBase: platform === "ios" ? 5 : 2,

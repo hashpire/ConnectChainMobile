@@ -23,7 +23,7 @@ https://docs.nativebase.io/
 - redux & react redux
 https://redux.js.org/basics/usagewithreact  
 - redux saga
-
+https://redux-saga.js.org
 
 
 ## TOOLS
